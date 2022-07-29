@@ -1,0 +1,64 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: S-2021.06-SP2
+Date   : Fri Jul 29 03:10:41 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Cost[2] (input port clocked by CLK)
+  Endpoint: MatchCount_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (fall edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  input external delay                     0.00       5.50 r
+  Cost[2] (in)                             0.00       5.50 r
+  U576/Y (NAND2X1)                         0.25       5.76 f
+  U854/Y (OAI21X2)                         0.29       6.05 r
+  U855/Y (AOI21X4)                         0.13       6.18 f
+  U597/Y (OAI21X2)                         0.28       6.45 r
+  U619/Y (AOI21X2)                         0.20       6.66 f
+  U566/Y (NOR2X1)                          0.40       7.06 r
+  U675/Y (XNOR2X2)                         0.38       7.44 r
+  U584/Y (INVX2)                           0.20       7.64 f
+  U592/Y (NAND2X2)                         0.16       7.80 r
+  U1001/Y (INVX1)                          0.18       7.98 f
+  U1002/Y (NOR3X2)                         0.26       8.24 r
+  U1007/Y (NAND4X1)                        0.31       8.55 f
+  U634/Y (NOR3X4)                          0.21       8.76 r
+  U1009/Y (CLKINVX1)                       0.15       8.91 f
+  U794/Y (NOR2X1)                          0.39       9.30 r
+  U1010/Y (NAND2X2)                        0.28       9.58 f
+  U582/Y (OAI22XL)                         0.50      10.08 r
+  MatchCount_reg[2]/D (DFFRX1)             0.00      10.08 r
+  data arrival time                                  10.08
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  MatchCount_reg[2]/CK (DFFRX1)            0.00      10.40 r
+  library setup time                      -0.30      10.10
+  data required time                                 10.10
+  -----------------------------------------------------------
+  data required time                                 10.10
+  data arrival time                                 -10.08
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+1
