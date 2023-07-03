@@ -5,3 +5,7 @@
 Cell-Based IC Design Category for Graduate Level
 
 test pattern all pass
+
+Get Valid at cycle : 400068 (pattern 3)
+
+Total cell area : 7477.046944
